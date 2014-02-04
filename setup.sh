@@ -148,6 +148,7 @@ sudo /etc/init.d/apache2 restart
 # Install Beanstalkd Console
 cd ~/Scripts
 git clone https://github.com/ptrofimov/beanstalk_console.git Beansole
+echo "127.0.0.1  beansole.app" | sudo tee -a /etc/hosts
 vhost="<VirtualHost *:80>
      ServerName beansole.app
      DocumentRoot /home/taylor/Scripts/Beansole/public
